@@ -1,0 +1,77 @@
+<!--src/index.html - UI Structure-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Security Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" id="nav-home">Home</a></li>
+            <li><a href="#" id="nav-security">Security</a></li>
+            <li><a href="#" id="nav-traffic">Traffic</a></li>
+            <li><a href="#" id="nav-bandwidth">Bandwidth</a></li>
+            <li><a href="#" id="nav-console">Console</a></li>
+            <li><a href="#" id="nav-devices">Devices</a></li>
+        </ul>
+    </nav>
+    <h1>Network Security Dashboard</h1>
+    <div id="dashboard">
+        <section id="security-status">
+            <h2>Network & Device Security Status</h2>
+            <p>Status: <span id="security-status-text">Secure</span></p>
+            <p>Detected Threats: <span id="threat-count">0</span></p>
+        </section>
+        <section id="network-traffic">
+            <h2>Network Traffic Monitoring</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Source IP</th>
+                        <th>Destination IP</th>
+                        <th>Protocol</th>
+                        <th>Packet Size</th>
+                        <th>Traffic Type</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody id="traffic-data"></tbody>
+            </table>
+        </section>
+        <section id="bandwidth-usage">
+            <h2>Bandwidth Usage</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Interface</th>
+                        <th>Received Data (Bytes)</th>
+                        <th>Transmitted Data (Bytes)</th>
+                    </tr>
+                </thead>
+                <tbody id="bandwidth-data"></tbody>
+            </table>
+        </section>
+        <section id="system-console">
+            <h2>System Console Logs</h2>
+            <pre id="console-logs">Loading logs...</pre>
+        </section>
+        <section id="device-info">
+            <h2>IP Leases & Device Information</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MAC Address</th>
+                        <th>IP Address</th>
+                        <th>Hostname</th>
+                    </tr>
+                </thead>
+                <tbody id="device-data"></tbody>
+            </table>
+        </section>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
