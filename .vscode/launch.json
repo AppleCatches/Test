@@ -7,18 +7,22 @@
         "stopAll": true
       }
     ],
+
     "configurations": [
-        
         {
             "name": "Renderer",
             "port": 9222,
             "request": "attach",
             "type": "chrome",
+
             "pathMapping": {
                 "/": "C:/Users/denis/OneDrive/Desktop/fgcu/Computer Security Project/Test/src" // "${workspaceFolder}/src"
             },
-            "url": "C:/Users/denis/OneDrive/Desktop/fgcu/Computer Security Project/Test/src/index.html", // "${workspaceFolder}/src/index.html"
+
+            "url": "file:///C:/Users/denis/OneDrive/Desktop/fgcu/Computer Security Project/Test/src/index.html", // "file///${workspaceFolder}/src/index.html"
+
             "webRoot": "C:/Users/denis/OneDrive/Desktop/fgcu/Computer Security Project/Test/src", // "${workspaceFolder}/src"
+
             "sourceMapPathOverrides": {
                 "/src/*": "C:/Users/denis/OneDrive/Desktop/fgcu/Computer Security Project/Test/src/*" // "${workspaceFolder}/src/*"
             }
@@ -26,12 +30,17 @@
         {  "name": "Main",
             "type": "node",
             "request": "launch",
+
             "program": "C:/Users/denis/OneDrive/Desktop/fgcu/Computer Security Project/Test/src/main.js", // "${workspaceFolder}/src/main.js"
+
             "cwd": "C:/Users/denis/OneDrive/Desktop/fgcu/Computer Security Project/Test", // "${workspaceFolder}"
+
             "runtimeExecutable": "C:/Users/denis/OneDrive/Desktop/fgcu/Computer Security Project/Test/node_modules/.bin/electron", // "${workspaceFolder}/node_modules/.bin/electron"
+
             "windows": {
-                "runtimeExecutable": "C:/Users/denis/OneDrive/Desktop/fgcu/Computer Security Project/Test/node_modules/.bin/electron.cmd", // "${workspaceFolder}/node_modules/.bin/electron.cmd"
+                "runtimeExecutable": "C:/Users/denis/OneDrive/Desktop/fgcu/Computer Security Project/Test/node_modules/.bin/electron.cmd" // "${workspaceFolder}/node_modules/.bin/electron.cmd"
             },
+
             "outputCapture": "std",
             "restart": true,
             "args": ["--remote-debugging-port=9222"]
