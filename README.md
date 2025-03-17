@@ -1,5 +1,3 @@
-# Test
-
 Follow these steps, some of these files are on my personal computer (windows) so you will have to build your own
 
 HOW TO INSTALL ELECTRON.JS
@@ -186,45 +184,9 @@ select: Extensions (Ctrl+Shift+X)
 
 install: JSON Server, GitHub Repositories, Remote Explorer
 
-select: Remote Explorer Extension
-
-If not visible, right click left-side bar
-
-Check Remote Explorer
-
-select: Open Remote Repository
-
-Enter a remote URL
 
 ------------------------------------------------------------------------------
 
-OPEN GitHub
-
-On Repository
-
-Select <> Code 
-
-On Local tab 
-
-Select HTTPS
-
-Copy web URL
-
-https://github.com/AppleCatches/Test.git
-
-------------------------------------------------------------------------------
-
-VS CODE APP
-
-Enter a remote URL
-
-Paste web URL
-
-Select Open GitHub Repository
-
-------------------------------------------------------------------------------
-
-Under GitHub Repository
 
 Select New Folder...
 
@@ -244,16 +206,6 @@ CREATE file styles.css
 
 Copy and Paste File Contents to each file
 
-SOURCE CONTROL (Ctrl+Shift+G)
-
-In Changes
-
-Select the + sign to Stage All Changes
-
-Enter a Message
-
-Commit & Push
-
 ------------------------------------------------------------------------------
 
 Download Git
@@ -269,31 +221,6 @@ Set up and Install Git
 git config --global user.name "GitHub Username"
 
 git config --global user.email "GitHub Email"
-
-** Copy and Paste File location where you will be putting your projects
-(right click to copy and paste)
-
-cd "C:\Users\denis\OneDrive\Desktop\fgcu\Computer Security Project"
-
-git clone https://github.com/AppleCatches/Test.git
-
-------------------------------------------------------------------------------
-
-VS Code App
-
-Workspace Trust
-
-Code is in a restricted mode intended for safe code browsing.
-
-Command Palette (Ctrl+Shift+P)
-
-Workspaces: Manage Workspace Trust 
-
-Trust
-
-Trusted Folders & Workspaces
-
-/AppleCatches/Test/
 
 ------------------------------------------------------------------------------
 
@@ -325,7 +252,7 @@ entry point: (index.js) main.js
 
 test command: ENTER
 
-git repository: (https://github.com/AppleCatches/Test.git) ENTER
+git repository: ENTER
 
 keywords: ENTER
 
@@ -339,7 +266,7 @@ Is this OK? (yes) ENTER
 
 ** Generate the node_modules folder and install the dependencies in the package.json file
 
-// npm install
+npm install
 
 ------------------------------------------------------------------------------
 
@@ -374,16 +301,6 @@ UPDATE TO
     "start": "electron . --remote-debugging-port=9222"
   },
 
-SOURCE CONTROL (Ctrl+Shift+G)
-
-In Changes
-
-Select the + sign to Stage All Changes
-
-Enter a Message
-
-Commit & Push
-
 ------------------------------------------------------------------------------
 
 OPEN Visual Studio Code app
@@ -401,16 +318,6 @@ Select Suggested debugger
 Delete contents of file
 
 replace with contents of launch.json file
-
-SOURCE CONTROL (Ctrl+Shift+G)
-
-In Changes
-
-Select the + sign to Stage All Changes
-
-Enter a Message
-
-Commit & Push
 
 ------------------------------------------------------------------------------
 
