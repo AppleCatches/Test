@@ -18,29 +18,35 @@ function createMainWindow() {
         webPreferences: {
             nodeIntegration: false,
             contextIsolation: true,
-            preload: path.join(__dirname, 'preload.js')
+            preload: path.join(__dirname, 'preload.js') // Ensure `preload.js` properly bridges IPC
         }
     });
 
     mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
-    // this will close the application when the main window is closed
-    mainWindow.on('closed', () =>{
+    mainWindow.on('closed', () => {
         mainWindow = null;
-    })
-
+    });
 }
 
-app.whenReady().then(() => {
-    createMainWindow();
-
-    app.on('activate', () => {
-        if (BrowserWindow.getAllWindows().length === 0) {
-            createMainWindow();
-        }
-    });
+// Ensure IPC uses secure validation before sending data
+ipcMain.handle('get-security-status', async () => {
+    return { status: "Secure", threats: 0 }; // This should be validated if coming from an external source
 });
 
+// Start the app when ready
+app.on('ready', createMainWindow);
+
+// Handle macOS app behavior properly
+app.on('activate', () => {
+    if (BrowserWindow.getAllWindows().length === 0) {
+        createMainWindow();
+    }
+});
+
+// Close the app properly on non-macOS systems
 app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') app.quit();
+    if (process.platform !== 'darwin') {
+        app.quit();
+    }
 });

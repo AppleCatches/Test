@@ -14,7 +14,6 @@
             "port": 9222,
             "request": "attach",
             "type": "chrome",
-
             "pathMapping": {
                 "/": "C:/Users/denis/OneDrive/Desktop/fgcu/Computer Security Project/Test/src" // "${workspaceFolder}/src"
             },

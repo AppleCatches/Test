@@ -1,4 +1,5 @@
 <!--src/index.html - UI Structure-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,7 @@
     <title>Network Security Dashboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <nav>
         <ul>
@@ -18,14 +20,17 @@
             <li><a href="#" id="nav-devices">Devices</a></li>
         </ul>
     </nav>
+
     <h1>Network Security Dashboard</h1>
     <div id="dashboard">
-        <section id="security-status">
+
+        <section id="security-status" class="page">
             <h2>Network & Device Security Status</h2>
             <p>Status: <span id="security-status-text">Secure</span></p>
             <p>Detected Threats: <span id="threat-count">0</span></p>
         </section>
-        <section id="network-traffic">
+
+        <section id="network-traffic" class="page">
             <h2>Network Traffic Monitoring</h2>
             <table>
                 <thead>
@@ -41,7 +46,8 @@
                 <tbody id="traffic-data"></tbody>
             </table>
         </section>
-        <section id="bandwidth-usage">
+
+        <section id="bandwidth-usage" class="page">
             <h2>Bandwidth Usage</h2>
             <table>
                 <thead>
@@ -51,14 +57,18 @@
                         <th>Transmitted Data (Bytes)</th>
                     </tr>
                 </thead>
-                <tbody id="bandwidth-data"></tbody>
+                <tbody id="bandwidth-data">
+                </tbody>
             </table>
+            <canvas id="bandwidthChart"></canvas>
         </section>
-        <section id="system-console">
+
+        <section id="system-console" class="page">
             <h2>System Console Logs</h2>
             <pre id="console-logs">Loading logs...</pre>
         </section>
-        <section id="device-info">
+
+        <section id="device-info" class="page">
             <h2>IP Leases & Device Information</h2>
             <table>
                 <thead>
@@ -71,7 +81,11 @@
                 <tbody id="device-data"></tbody>
             </table>
         </section>
+
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="renderer.js"></script>
+
 </body>
 </html>
